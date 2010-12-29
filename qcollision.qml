@@ -1,6 +1,6 @@
 import QtQuick 1.0
 import "content"
-import "content/zonix.js" as ZonixJS
+import "content/qcollision.js" as QcollJS
 
 Rectangle{
         id: screen
@@ -43,19 +43,19 @@ Rectangle{
                             id: newGameButton
                             anchors { left: parent.left; leftMargin: 3; verticalCenter: parent.verticalCenter }
                             text: "Easy"
-                            onClicked: {ZonixJS.startNewGame(2)}
+                            onClicked: {QcollJS.startNewGame(2)}
                 }
                 Button {
                             id: newGameButton1
                             anchors { left: parent.left; leftMargin: 60; verticalCenter: parent.verticalCenter }
                             text: "Medium"
-                            onClicked: {ZonixJS.startNewGame(3)}
+                            onClicked: {QcollJS.startNewGame(3)}
                 }
                 Button {
                             id: newGameButton2
                             anchors { left: parent.left; leftMargin: 140; verticalCenter: parent.verticalCenter }
                             text: "Hard"
-                            onClicked: {ZonixJS.startNewGame(4)}
+                            onClicked: {QcollJS.startNewGame(4)}
                 }
                 Button {
                             id: newGameButton3
@@ -67,13 +67,13 @@ Rectangle{
                             id: newGameButton4
                             anchors { left: parent.left; leftMargin: 300; verticalCenter: parent.verticalCenter }
                             text: "About"
-                            onClicked: {ZonixJS.load("About")}
+                            onClicked: {QcollJS.load("About")}
                 }
 	}
         Timer{
             id:update_timer
             interval: 16; running: false; repeat: true;
-            onTriggered: ZonixJS.update();
+            onTriggered: QcollJS.update();
         }
 
 }
