@@ -36,7 +36,7 @@ Rectangle {
         }
 
         Text {
-            text: "Based on KCollision"
+            text: "Based on Kollision"
             color: "white"
             font.pointSize: 12
             anchors.horizontalCenter: parent.horizontalCenter
